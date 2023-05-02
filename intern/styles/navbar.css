@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: monospace, san-serif;
+  font-weight: 500;
+}
+.navbar_div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15%;
+}
+.navbar_div img {
+  cursor: pointer;
+}
+.navbar_div .navbar_right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 70px;
+}
+.navbar_right .navbar_links {
+  display: flex;
+  gap: 20px;
+}
+.navbar_links a {
+  text-decoration: none;
+  color: #202020;
+  font-size: 16px;
+  transition: 0.3s ease all;
+  white-space: nowrap;
+}
+.navbar_links a:hover {
+  color: #ff5219;
+}
+@media (max-width: 1500px) {
+  .navbar_div {
+    padding: 0 10%;
+  }
+}
+@media (max-width: 1300px) {
+  .navbar_div {
+    padding: 0 5%;
+  }
+  .navbar_right {
+    gap: 40px;
+  }
+}
+@media (max-width: 1100px) {
+  .navbar_div {
+    padding: 0 2%;
+  }
+  .navbar_right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px !important;
+  }
+  .navbar_links {
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar_div {
+    padding: 0;
+  }
+  .navbar_div img {
+    width: 40%;
+  }
+  .navbar_right {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .navbar_links {
+    align-items: center;
+    padding-right: 10px;
+  }
+  .navbar_links a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 700px) {
+  .navbar_div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar_div img {
+    margin-left: 10%;
+    width: 30%;
+  }
+  .navbar_right {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .navbar_links {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    justify-content: center !important;
+    gap: 40px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar_div {
+    padding: 0 3%;
+  }
+  .navbar_right {
+    gap: 20px;
+  }
+  .navbar_div img {
+    width: 50%;
+    margin: 0 !important;
+  }
+  .navbar_links {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    justify-content: center !important;
+    gap: 20px !important;
+  }
+}

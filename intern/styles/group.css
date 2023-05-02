@@ -1,0 +1,81 @@
+.group_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 15%;
+}
+.group_carousels{
+    display: flex;
+    gap: 30px;
+    margin: 40px 0;
+}
+.group_carousel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    transition: all .3s ease all;
+}
+.group_carousel h4{
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.group_carousel p{
+    font-size: 12px;
+    color: #FF5219;
+    margin-bottom: 10px;
+}
+.carousel_img_div{
+    position: relative;
+}
+.carousel_absolute_img{
+    position: absolute;
+    bottom: 20px;
+    right: 25%;
+    opacity: 0;
+    z-index: -1;
+    cursor: pointer;
+}
+.group_carousel:hover{
+    background-color: #fff;
+}
+.group_carousel:hover .carousel_absolute_img{
+    opacity: 100;
+    z-index: 0;
+}
+@media screen and (max-width:1200px){
+    .group_carousels{
+        display: grid;
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+    .group_carousels .group_carousel{
+        display: none;
+    }
+    .group_carousels .group_carousel:nth-of-type(odd) {
+        display: grid;
+    }
+}
+@media screen and (max-width:768px){
+    .group_div{
+        padding: 80px 10%;
+    }
+}
+@media screen and (max-width:660px){
+    .group_div{
+        padding: 40px 5%;
+    }
+}
+@media screen and (max-width:576px){
+    .group_carousels{
+        grid-template-columns: repeat(1,minmax(0,1fr));
+    }
+    .group_carousels .group_carousel{
+        display: none !important;
+    }
+    .group_carousels .group_carousel:first-child{
+        display: grid !important;
+    }
+}

@@ -1,0 +1,63 @@
+.choosing_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.choosing_div .right_choose {
+  width: 40%;
+}
+.right_choose h3 {
+  font-weight: 600;
+}
+.right_choose h1 {
+  line-height: 60px;
+}
+.right_choose p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #777777;
+  line-height: 25px;
+}
+.lists {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.list p {
+  font-size: 14px;
+  color: black;
+  margin: 0;
+}
+.right_choose button p {
+  margin-top: 0 !important;
+}
+@media screen and (max-width: 1300px) {
+  .choosing_div {
+    flex-direction: column;
+    align-items: center;
+  }
+  .right_choose {
+    width: 80% !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .right_choose h1 {
+    text-align: left;
+    line-height: 40px !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .choosing_div .brat_img {
+    width: 90%;
+  }
+}

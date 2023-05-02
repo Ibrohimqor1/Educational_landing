@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace, san-serif;
+  font-weight: 500;
+}
+
+.header_div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 15%;
+  background: #202020;
+  color: white;
+}
+.header_left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.header_left div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header_left p {
+  font-size: 16px;
+}
+.header_left .orange_icon {
+  color: #ff5219;
+}
+.header_right {
+  display: flex;
+  gap: 20px;
+}
+.header_right .social_icons {
+  color: white;
+  font-size: 17px;
+}
+@media screen and (max-width: 1500px) {
+  .header_div {
+    padding: 15px 10%;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .header_div {
+    padding: 15px 5%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .header_div {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center text */
+    gap: 10px;
+    padding: 15px 12%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header_div {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center text */
+    gap: 10px;
+    padding: 15px 10%;
+  }
+  .header_left {
+    flex-basis: 100%; /* Take up full width of the container */
+    justify-content: center; /* Center items */
+    gap: 20px; /* Reduce gap */
+  }
+
+  .header_right {
+    flex-basis: 100%; /* Take up full width of the container */
+    justify-content: center; /* Center items */
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header_div {
+    gap: 10px;
+    padding: 15px 8%;
+  }
+  .header_left {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Reduce gap */
+  }
+  .header_left div {
+    align-items: flex-start;
+  }
+}
